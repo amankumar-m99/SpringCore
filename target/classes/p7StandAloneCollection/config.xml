@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p ="http://www.springframework.org/schema/p"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="
+    	http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd
+        ">
+    
+    <!-- stand-alone list -->
+    <util:list list-class="java.util.LinkedList" id="globalSubjects">
+		<value>Sub1-Hindi</value>
+		<value>Sub2-English</value>
+		<value>Sub3-Maths</value>
+		<value>Sub4-Science</value>
+		<value>Sub5-Computer</value>
+	</util:list>
+	
+	<util:map map-class="java.util.HashMap" id="globalMarks">
+		<entry key="Sub1" value="21"/>
+		<entry key="Sub2" value="86"/>
+		<entry key="Sub3" value="71"/>
+		<entry key="Sub4" value="26"/>
+	</util:map>
+    
+    <bean class="p7StandAloneCollection.Student" name="student">
+		<property name="id" value="101"/>
+		<property name="name" value="Bhola"/>
+		<property name="subjects" ref="globalSubjects"/>
+		<property name="marks" ref="globalMarks"/>
+		
+    </bean>
+</beans>
