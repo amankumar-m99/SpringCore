@@ -9,5 +9,7 @@ public class Main {
 		Student student = context.getBean("student", Student.class);
 		System.out.println(student);
 		student.study();
+		((AnnotationConfigApplicationContext)context).close();
+		//ApplicationContext does not has close() method hence type casting required.
 	}
 }

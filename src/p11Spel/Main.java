@@ -14,5 +14,7 @@ public class Main {
 		SpelExpressionParser temp = new SpelExpressionParser();
 		Expression expression = temp.parseExpression("13+23");
 		System.out.println(expression.getValue());
+		((ClassPathXmlApplicationContext)context).close();
+		//ApplicationContext does not has close() method hence type casting required.
 	}
 }

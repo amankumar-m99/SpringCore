@@ -12,6 +12,8 @@ public class Main {
 		System.out.println("-------------------------------------");
 		Person person2 = context.getBean("person", Person.class);
 		System.out.println("person2 hashcode: "+person2.hashCode());
+		((ClassPathXmlApplicationContext)context).close();
+		//ApplicationContext does not has close() method hence type casting required.
 	}
 }
 /*
