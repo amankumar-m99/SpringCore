@@ -6,8 +6,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         				   https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="certificate" class="p4ConstructorInjection.Certificate" name="certificate" c:name="JavaFX"/>   
-    <bean id="person1" class="p4ConstructorInjection.Person" name="person1">
+    <bean id="certificate" class="p04ConstructorInjection.Certificate" name="certificate" c:name="JavaFX"/>
+
+    <bean id="person1" class="p04ConstructorInjection.Person" name="person1">
 		<constructor-arg> <value>1001</value></constructor-arg>
 		<constructor-arg value="AmanK"/>
 		<constructor-arg>
@@ -15,14 +16,14 @@
 		</constructor-arg>
     </bean>
     
-    <bean id="person2" class="p4ConstructorInjection.Person" name="person2" c:id="1002" c:name="CSchema" c:certificate-ref="certificate"/>
+    <bean id="person2" class="p04ConstructorInjection.Person" name="person2" c:id="1002" c:name="CSchema" c:certificate-ref="certificate"/>
     
-    <bean class="p4ConstructorInjection.Animal" name="animal1">
+    <bean class="p04ConstructorInjection.Animal" name="animal1">
 		<constructor-arg value="Dog"/>
 		<constructor-arg value = "2" type="int"/>		
 	</bean>
 	
-    <bean class="p4ConstructorInjection.Animal" name="animal2">
+    <bean class="p04ConstructorInjection.Animal" name="animal2">
 		<constructor-arg value="Dog"/>
 		<constructor-arg value = "5.5" type="double"/>		
 	</bean>

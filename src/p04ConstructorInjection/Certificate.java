@@ -12,5 +12,4 @@ public class Certificate {
 	public String toString() {
 		return "Certificate [name=" + name + "]";
 	}
-	
 }
