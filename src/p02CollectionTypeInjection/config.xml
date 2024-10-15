@@ -1,39 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd"
-    xmlns:p ="http://www.springframework.org/schema/p">
-    
-    <bean class="p2CollectionTypeInjection.Student" name="student">
-		<property name="id" value="101"/>
-		<property name="name" value="Bhola"/>
-		<property name="subjects">
+	xmlns:p="http://www.springframework.org/schema/p">
+
+	<bean class="p02CollectionTypeInjection.Student" name="student">
+		<property name="id" value="101" />
+		<property name="name" value="Bhola" />
+		<property name="friends">
 			<list>
+				<value>Friend1</value>
+				<value>Friend2</value>
+				<value>Friend3</value>
+				<value>Friend4</value>
+			</list>
+		</property>
+		<property name="subjects">
+			<set>
 				<value>Hindi</value>
 				<value>English</value>
 				<value>Maths</value>
 				<value>Science</value>
 				<value>Computer</value>
-				<null/>
-			</list>
+				<null />
+			</set>
 		</property>
 		<property name="marks">
 			<map>
-				<entry key="Hindi"><value>95</value></entry>
-				<entry key="English" value="91"/>
-				<entry key="Maths" value="96"/>
-				<entry key="Science" value="92"/>
-				<entry key="Computer" value="99"/>
+				<entry key="Hindi">
+					<value>95</value>
+				</entry>
+				<entry key="English" value="91" />
+				<entry key="Maths" value="96" />
+				<entry key="Science" value="92" />
+				<entry key="Computer" value="99" />
 			</map>
 		</property>
-		
-    </bean>
-    
-    <!-- using value attribute -->
-    <bean id="student2" class="p1SetterInjection.Student" name="student2">
-		<property name="id" value="101"/>
+
+	</bean>
+
+	<!-- using value attribute -->
+	<bean id="student2" class="p01SetterInjection.Student"
+		name="student2">
+		<property name="id" value="101" />
 		<property name="name" value="student2" />
-		<property name="city" value="Delhi"/>
-    </bean>
+		<property name="city" value="Delhi" />
+	</bean>
 </beans>
