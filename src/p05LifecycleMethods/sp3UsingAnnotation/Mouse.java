@@ -25,11 +25,11 @@ public class Mouse {
 
 	@PostConstruct
 	public void start() {
-		System.out.println("Mouse start() using annotaion");
+		System.out.println("Inside lifecycle method start() of bean Mouse using annotaion");
 	}
 
 	@PreDestroy
 	public void end() {
-		System.out.println("Mouse end() using annotation");
+		System.out.println("Inside lifecycle method end() of bean Mouse using annotaion");
 	}
 }

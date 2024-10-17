@@ -22,10 +22,10 @@ public class Laptop {
 	}
 
 	public void init() {
-		System.out.println("Inside laptop init()");
+		System.out.println("Inside lifecycle method init() of bean laptop");
 	}
 
 	public void destroy() {
-		System.out.println("Inside laptop destroy()");
+		System.out.println("Inside lifecycle method destroy() of bean laptop");
 	}
 }

@@ -27,12 +27,12 @@ public class Keyboard implements InitializingBean, DisposableBean{
 	@Override
 	public void afterPropertiesSet() throws Exception {
 		// it is init() method as its called after setting properties
-		System.out.println("Keyboard init() using interface");
+		System.out.println("Inside lifecycle method init() of bean Keyboard using interface");
 	}
 
 	@Override
 	public void destroy() throws Exception {
-		System.out.println("Keyboard destroy() using interface");
+		System.out.println("Inside lifecycle method destroy() of bean Keyboard using interface");
 	}
 	
 
