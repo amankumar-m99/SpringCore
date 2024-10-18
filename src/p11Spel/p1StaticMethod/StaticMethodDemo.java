@@ -6,14 +6,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class StaticMethodDemo {
 
-	@Value("#{22+3}")
+	// Calling static variable T(<class name>).<variable name>(<arguments>)
+	@Value("#{T(java.lang.Integer).MAX_VALUE}")
 	private int x;
 	
-	// Calling static method T(<class name>).<methodname>(<arguments>)
+	// Calling static method T(<class name>).<method name>(<arguments>)
 	@Value("#{T(java.lang.Math).pow(3,2)}")
 	private int sq;
 
-	// Creating new objecs <class>
+	// Creating new objects <class>
 	@Value("#{new java.lang.String('aman static name')}")
 	private String name;
 
