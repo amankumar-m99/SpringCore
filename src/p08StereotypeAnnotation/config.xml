@@ -13,6 +13,6 @@
         http://www.springframework.org/schema/util
         https://www.springframework.org/schema/util/spring-util.xsd
         ">
-    <context:component-scan base-package="p8StereotypeAnnotation"/>
+    <context:component-scan base-package="p08StereotypeAnnotation"/>
 
 </beans>
