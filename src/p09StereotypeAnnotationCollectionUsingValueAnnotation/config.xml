@@ -13,7 +13,7 @@
         http://www.springframework.org/schema/util
         https://www.springframework.org/schema/util/spring-util.xsd
         ">
-    <context:component-scan base-package="p9StereotypeAnnotationCollectionUsingValueAnnotation;"/>
+    <context:component-scan base-package="p09StereotypeAnnotationCollectionUsingValueAnnotation;"/>
     
     <!-- stand-alone list -->
     <util:list list-class="java.util.ArrayList" id="globalSubjects">
